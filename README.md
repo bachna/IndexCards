@@ -13,7 +13,7 @@ Application supporting learning of foreign words.
     
 **Logged user** 
     <br>[-] sees homepage 
-    <br>[-] plays set of 10 random words from admin's or own collection 
+    <br>[-] plays set of 10 random words from admin's or own collection (PL > EN or EN > PL)
     <br>[-] get result stored in database
     <br>[-] gets previous results and statistics stored in database
     <br>[-] sees admin's collections and can add them to own account
@@ -32,15 +32,10 @@ Application supporting learning of foreign words.
     <br>[-] sends newsletter to users who agreed to that
     <br>[-] logs out
     
-
-
-
-
-
-
-
-
-
+## **ISSUES:**
+    <br>[-] layout design
+    <br>[-] security access for each role
+    <br>[-] registration form styling
 
 Homepage | PL
 ------------ | -------------
