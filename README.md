@@ -3,13 +3,13 @@ IndexCards
 
 Application supporting learning of foreign words.
 
-##**ROLES:**
+**ROLES:**
 
 [x] Anonymous 
-    [x] sees homepage 
-    [x] plays demo set of 10 random words (PL > EN or EN > PL)
-    [x] gets result stored in session
-    [ ] can regiater or login
+    <br>[x] sees homepage 
+    <br>[x] plays demo set of 10 random words (PL > EN or EN > PL)
+    <br>[x] gets result stored in session
+    <br>[ ] can regiater or login
     
 [ ] Logged user - sees homepage, plays set of 10 random words from admin or self created collection, results are stored in database, 
 
