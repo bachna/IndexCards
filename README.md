@@ -3,7 +3,7 @@ IndexCards
 
 Application supporting learning of foreign words.
 
-## **ROLES:**
+## **ROLES:** 
 
 **Anonymous** 
     <br>[x] sees homepage 
@@ -33,6 +33,8 @@ Application supporting learning of foreign words.
     <br>[-] logs out
     
 ## **ISSUES:**
+
+**To be fixed**
     <br>[-] layout design
     <br>[-] security access for each role
     <br>[-] registration form styling
