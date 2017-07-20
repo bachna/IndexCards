@@ -39,6 +39,7 @@ Application supporting learning of foreign words.
     <br>[-] security access for each role
     <br>[-] registration form styling
     <br>[-] move database to another server + change app/config/parameters.yml
+    <br>[-] set up production server
 
 Homepage | PL
 ------------ | -------------
