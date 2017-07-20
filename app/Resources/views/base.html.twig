@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %} Index Cards {% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('/semantic/semantic.css') }}" rel="stylesheet"/>
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('/semantic/semantic.js') }}"></script>
+        {% endblock %}
+    </head>
+    <body>
+        <br>
+        <div class="ui center aligned container">
+            <br>
+            <div class="ui grid">
+                <div class="four wide column"></div>
+                <div class="eight wide column" style="background-color: white">
+                    <div class="ui attached stackable menu">
+                        <div class="ui container">
+                            <a href="{{ path('homepage') }}" class="item">
+                                <i class="comments outline icon"></i>
+                                New quiz
+                            </a>
+                        </div>
+                        <div class="right menu">
+                            {{ knp_menu_render('AppBundle:Builder:mainMenu') }}
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    {% block body %}{% endblock %}
+                </div>
+                <div class="four wide column"></div>
+            </div>
+        </div>
+    </body>
+</html>

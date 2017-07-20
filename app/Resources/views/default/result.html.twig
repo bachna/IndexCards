@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        <i class="hand massive peace icon"></i>
+        <p>
+        <h2> Learn new words easily </h2>
+        </p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h2> your score: {{ good_answers }} / 10 </h2>
+    </div>
+    <br>
+    <br>
+    <div>
+        <a href="{{ path("homepage") }}" class="fluid massive ui button">
+            <br>
+            <h1> PLAY AGAIN </h1>
+            <br><br>
+        </a>
+    </div>
+
+{% endblock %}

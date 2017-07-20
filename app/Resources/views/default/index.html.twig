@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        <i class="hand massive peace icon"></i>
+        <p>
+            <h2> Learn new words easily </h2>
+        </p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <a href="{{ path("pltoen") }}" class="fluid massive ui button">
+            <div class="ui red header">
+                <h1> PL </h1>
+            </div>
+            <div class="ui horizontal divider">
+                <i class="chevron massive circle down icon"></i>
+            </div>
+            <div class="ui blue header">
+                <h1> EN </h1>
+            </div>
+        </a>
+    </div>
+    <br>
+    <div>
+        <a href="{{ path("entopl") }}" class="fluid massive ui button">
+            <div class="ui blue header">
+                <h1> EN </h1>
+            </div>
+            <div class="ui horizontal divider">
+                <i class="chevron massive circle down icon"></i>
+            </div>
+            <div class="ui red header">
+                <h1> PL </h1>
+            </div>
+        </a>
+    </div>
+
+{% endblock %}
+
+

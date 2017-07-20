@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Words_in_quiz</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ words_in_quiz.id }}</td>
+            </tr>
+            <tr>
+                <th>Word</th>
+                <td>{{ words_in_quiz.word }}</td>
+            </tr>
+            <tr>
+                <th>Quiz</th>
+                <td>{{ words_in_quiz.quiz }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('words_in_quiz_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('words_in_quiz_edit', { 'id': words_in_quiz.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

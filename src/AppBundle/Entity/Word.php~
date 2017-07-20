@@ -1,0 +1,113 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Word
+ *
+ * @ORM\Table(name="word")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\WordRepository")
+ */
+class Word
+{
+    /**
+     * @var
+     *
+     * @ORM\ManyToOne(targetEntity="Collection", inversedBy="words")
+     * @ORM\JoinColumn(name="collection_id", referencedColumnName="id")
+     */
+    private $collection;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="polish", type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     min = 5,
+     *     max = 255
+     *     )
+     */
+    private $polish;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="english", type="string", length=255)
+     *
+     * @Assert\Length(
+     *     min = 5,
+     *     max = 255
+     *     )
+     */
+    private $english;
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set polish
+     *
+     * @param string $polish
+     * @return Word
+     */
+    public function setPolish($polish)
+    {
+        $this->polish = $polish;
+
+        return $this;
+    }
+
+    /**
+     * Get polish
+     *
+     * @return string 
+     */
+    public function getPolish()
+    {
+        return $this->polish;
+    }
+
+    /**
+     * Set english
+     *
+     * @param string $english
+     * @return Word
+     */
+    public function setEnglish($english)
+    {
+        $this->english = $english;
+
+        return $this;
+    }
+
+    /**
+     * Get english
+     *
+     * @return string 
+     */
+    public function getEnglish()
+    {
+        return $this->english;
+    }
+}

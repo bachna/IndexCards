@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Words_in_quizzes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Word</th>
+                <th>Quiz</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for words_in_quiz in words_in_quizzes %}
+            <tr>
+                <td><a href="{{ path('words_in_quiz_show', { 'id': words_in_quiz.id }) }}">{{ words_in_quiz.id }}</a></td>
+                <td>{{ words_in_quiz.word }}</td>
+                <td>{{ words_in_quiz.quiz }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('words_in_quiz_show', { 'id': words_in_quiz.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('words_in_quiz_edit', { 'id': words_in_quiz.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('words_in_quiz_new') }}">Create a new words_in_quiz</a>
+        </li>
+    </ul>
+{% endblock %}

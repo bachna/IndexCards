@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+    <div>
+        <i class="hand massive peace icon"></i>
+        <p>
+        <h2> Learn new words easily </h2>
+        </p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        {% if language == "PlToEn" %}
+            {% if not translated %}
+                <a href="{{ path('quiz_show_anonymous', {'translated': true}) }}" class="fluid massive ui red basic button">
+                    <br>
+                    <h1> {{ word.original }} </h1>
+                    <br><br>
+                </a>
+            {% else  %}
+                <span class="fluid disabled massive ui blue basic button">
+                    <br>
+                    <h1> {{ word.foreign }} </h1>
+                    <br><br>
+                </span>
+                <br>
+                <a href="{{ path('quiz_good_anonymous') }}" class="ui icon button">
+                    <i class="checkmark big icon"></i>
+                </a>
+                <a href="{{ path('quiz_bad_anonymous') }}" class="ui icon button">
+                    <i class="remove big icon"></i>
+                </a>
+            {% endif %}
+        {% elseif language == "EnToPl" %}
+            {% if not translated %}
+                <a href="{{ path('quiz_show_anonymous', {'translated': true}) }}" class="fluid massive ui blue basic button">
+                    <br>
+                    <h1> {{ word.foreign }} </h1>
+                    <br><br>
+                </a>
+            {% else  %}
+                <span class="fluid disabled massive ui red basic button">
+                    <br>
+                    <h1> {{ word.original }} </h1>
+                    <br><br>
+                </span>
+                <br>
+                <a href="{{ path('quiz_good_anonymous') }}" class="ui icon button">
+                    <i class="checkmark big icon"></i>
+                </a>
+                <a href="{{ path('quiz_bad_anonymous') }}" class="ui icon button">
+                    <i class="remove big icon"></i>
+                </a>
+            {% endif %}
+        {%  endif %}
+    </div>
+{% endblock %}
+
+{#{{ test }}#}
+{#{{ language }}#}
+
