@@ -9,7 +9,7 @@ Application supporting learning of foreign words.
     <br>[x] sees homepage 
     <br>[x] plays demo set of 10 random words (PL > EN or EN > PL)
     <br>[x] gets result stored in session
-    <br>[-] can regiater or login
+    <br>[-] can register or log in (as user or admin)
     
 **Logged user** 
     <br>[-] sees homepage 
